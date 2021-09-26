@@ -28,8 +28,9 @@ class MealTypeController extends Controller
         $mealTypes = MealType::all();
         foreach ($mealTypes as $mealType)
         {
-            $meals = Meal::where('meal_type_id', '=', $mealType->id);
+            $meals = Meal::where('meal_id', '=', $mealType->id);
             echo "<h3>Meal Type : " . $mealType->type_name . "</h3";
+            echo "<br>";
 
             foreach ($meals as $meal) {
                 echo "<p style='padding-left:10px'>Meal Name : $meal->type_name</p>";

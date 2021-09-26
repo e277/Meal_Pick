@@ -29,9 +29,9 @@ Route::middleware(['adminProtectedPages', 'auth'])->group(function () {
 });
 
 
-Route::get('add-type', [MealTypeController::class, 'add_type']);
-Route::get('get-type', [MealTypeController::class, 'get_type']);
+Route::get('addtype', [MealTypeController::class, 'add_type']);
+Route::get('gettype', [MealTypeController::class, 'get_type']);
 
-Route::view('add-meal', [MealController::class, 'add_meal']);
-Route::view('choose', [MealController::class, 'choose_meal']);
-Route::view('range', [MealController::class, 'date_range']);
+Route::get('addmeal', [MealController::class, 'add_meal']);
+Route::get('choosemeal', [MealController::class, 'choose_meal']);
+Route::get('range', [MealController::class, 'date_range']);

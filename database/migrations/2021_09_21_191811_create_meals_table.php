@@ -19,7 +19,8 @@ class CreateMealsTable extends Migration
             $table->string('student_name', 50)->unique();
             $table->string('meal_name', 50)->unique();
             $table->string('meal_type', 50);
-            $table->foreign('meal_type_id')->references('id')->on('meal_types')->onDelete('cascade');
+            // $table->foreign('meal_type_id')->references('id')->on('meal_types')->onDelete('cascade');
+            $table->foreign('meal_id')->references('id')->on('meal_types');
             $table->timestamps();
         });
     }
